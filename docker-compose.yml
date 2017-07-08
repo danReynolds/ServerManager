@@ -8,6 +8,7 @@ services:
       - logs:/etc/nginx/log/
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ../SupermarKit/nginx.conf:/etc/nginx/sites-enabled/supermarkit.conf
+      - ../danReynolds.ca/nginx.conf:/etc/nginx/sites-enabled/danreynolds.conf
       - /etc/letsencrypt/live/supermarkit.org/fullchain.pem:/etc/nginx/certs/supermarkit_fullchain.pem
       - /etc/letsencrypt/live/supermarkit.org/privkey.pem:/etc/nginx/certs/supermarkit_privkey.pem
       - /etc/letsencrypt/live/supermarkit.org/chain.pem:/etc/nginx/certs/supermarkit_chain.pem
