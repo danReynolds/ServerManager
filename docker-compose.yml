@@ -15,8 +15,8 @@ services:
       - /etc/letsencrypt/live/supermarkit.org/chain.pem:/etc/nginx/certs/supermarkit_chain.pem
       - /etc/ssl/certs/dhparam.pem:/etc/nginx/certs/dhparam.pem
     ports:
-      - 80
-      - 443
+      - 80:80
+      - 443:443
 volumes:
   logs:
 networks:
