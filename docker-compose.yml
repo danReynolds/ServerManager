@@ -11,7 +11,7 @@ services:
       - ../SummonerExpert/nginx.conf:/etc/nginx/sites-enabled/summonerexpert.conf
       - ../SupermarKit/nginx.conf:/etc/nginx/sites-enabled/supermarkit.conf
       - ../danReynolds.ca/nginx.conf:/etc/nginx/sites-enabled/danreynolds.conf
-      - /etc/letsencrypt/live:/etc/nginx/certs/
+      - /etc/letsencrypt/archive:/etc/nginx/certs/
       - /etc/ssl/certs/dhparam.pem:/etc/nginx/certs/dhparam.pem
     ports:
       - 80:80
