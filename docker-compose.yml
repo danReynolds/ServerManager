@@ -8,7 +8,6 @@ services:
     volumes:
       - logs:/etc/nginx/log/
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - ../SummonerExpert/nginx.conf:/etc/nginx/sites-enabled/summonerexpert.conf
       - ../SummonerExpert-Client/nginx.conf:/etc/nginx/sites-enabled/summonerexpert-client.conf
       - ../SupermarKit/nginx.conf:/etc/nginx/sites-enabled/supermarkit.conf
       - ../danReynolds.ca/nginx.conf:/etc/nginx/sites-enabled/danreynolds.conf
@@ -18,9 +17,6 @@ services:
       - /etc/letsencrypt/live/supermarkit.org/privkey.pem:/etc/nginx/certs/supermarkit_privkey.pem
       - /etc/letsencrypt/live/supermarkit.org/chain.pem:/etc/nginx/certs/supermarkit_chain.pem
       - /etc/letsencrypt/live/supermarkit.org/fullchain.pem:/etc/nginx/certs/supermarkit_fullchain.pem
-      - /etc/letsencrypt/live/api.summonerexpert.com/privkey.pem:/etc/nginx/certs/summonerexpert_privkey.pem
-      - /etc/letsencrypt/live/api.summonerexpert.com/chain.pem:/etc/nginx/certs/summonerexpert_chain.pem
-      - /etc/letsencrypt/live/api.summonerexpert.com/fullchain.pem:/etc/nginx/certs/summonerexpert_fullchain.pem
       - /etc/ssl/certs/dhparam.pem:/etc/nginx/certs/dhparam.pem
     ports:
       - 80:80
