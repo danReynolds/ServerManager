@@ -1,5 +1,10 @@
 version: '3'
 services:
+  letsencrypt:
+    image: certbot/certbot:latest
+    volumes:
+      - webroot:/usr/share/nginx/html
+      - letsencrypt:/etc/letsencrypt
   nginx:
     container_name: servermanager
     networks:
@@ -21,10 +26,14 @@ services:
       - /etc/letsencrypt/live/www.summonerexpert.com/chain.pem:/etc/nginx/certs/summonerexpert_chain.pem
       - /etc/letsencrypt/live/www.summonerexpert.com/fullchain.pem:/etc/nginx/certs/summonerexpert_fullchain.pem
       - /etc/ssl/certs/dhparam.pem:/etc/nginx/certs/dhparam.pem
+      - letsencrypt:/etc/nginx/letsencrypt
+      - webroot:/usr/share/nginx/html
     ports:
       - 80:80
       - 443:443
 volumes:
+  webroot:
+  letsencrypt:
   logs:
 networks:
   nginx_default:
