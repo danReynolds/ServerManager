@@ -19,9 +19,6 @@ services:
       - /etc/letsencrypt/live/danreynolds.ca/privkey.pem:/etc/nginx/certs/danreynolds.ca_privkey.pem
       - /etc/letsencrypt/live/danreynolds.ca/chain.pem:/etc/nginx/certs/danreynolds.ca_chain.pem
       - /etc/letsencrypt/live/danreynolds.ca/fullchain.pem:/etc/nginx/certs/danreynolds.ca_fullchain.pem
-      - /etc/letsencrypt/live/supermarkit.org/privkey.pem:/etc/nginx/certs/supermarkit_privkey.pem
-      - /etc/letsencrypt/live/supermarkit.org/chain.pem:/etc/nginx/certs/supermarkit_chain.pem
-      - /etc/letsencrypt/live/supermarkit.org/fullchain.pem:/etc/nginx/certs/supermarkit_fullchain.pem
       - /etc/letsencrypt/live/www.summonerexpert.com/privkey.pem:/etc/nginx/certs/summonerexpert_privkey.pem
       - /etc/letsencrypt/live/www.summonerexpert.com/chain.pem:/etc/nginx/certs/summonerexpert_chain.pem
       - /etc/letsencrypt/live/www.summonerexpert.com/fullchain.pem:/etc/nginx/certs/summonerexpert_fullchain.pem
